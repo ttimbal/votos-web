@@ -3,9 +3,7 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo center hide-on-small-only">@yield('navbar-logo')</a>
             <ul id="nav-mobile" class="right">
-                @if(Request::path() != '/')
-                    <li><a href="{{ route('/') }}">Inicio</a></li>
-                @endif
+
                 @auth
                     <li>
                         <a href="#!" data-target="sidenav-left" class="sidenav-trigger waves-effect left show-on-medium-and-up"><i class="material-icons dark-primary-color-icon">menu</i></a>

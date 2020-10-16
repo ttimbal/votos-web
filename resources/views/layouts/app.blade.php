@@ -34,7 +34,7 @@
         @include('layouts.preloader')
     </main>
 
-    @include('layouts.footer')
+
 
     <!-- Incluimos los scripts -->
     @include('layouts.scripts')
