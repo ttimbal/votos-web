@@ -5,6 +5,7 @@ namespace App\Core\Business;
 
 
 use App\Core\Models\Docente;
+use App\Core\Models\Partido;
 use App\Core\Repositories\AdministrativoRepository;
 use App\Core\Repositories\MesaRecintoRepository;
 use App\Core\Repositories\MesaRepository;
@@ -40,6 +41,7 @@ VotoPostulanteRepository $votoPostulanteRepository)
             $mesaRecinto = $this->mesaRecintoRepository->allByRecinto($recinto_id);
             //return $mesaRecinto;
             $data['mesa_recinto'] = $mesaRecinto;
+            $data['partidos'] = Partido::all();
             return ['success' => true, 'data' => $data];
         } catch (\Exception $exception) {
             return ['success' => false, 'error' => $exception->getMessage()];
@@ -55,21 +57,24 @@ VotoPostulanteRepository $votoPostulanteRepository)
     {
         try {
             DB::beginTransaction();
-            $mas['presidente']=$request['pre_mas'];
-            $mas['diputado']=$request['dip_mas'];
-            $mas['id']=1;
+            $partidos=Partido::all()->load('postulantes');
+            $votos=[];
+            foreach ($partidos as $partido){
+                $partido_actual['presidente']=$request['pre_'.strtolower(substr($partido->nombre,0,3))];
+                $partido_actual['diputado']=$request['dip_'.strtolower(substr($partido->nombre,0,3))];
+                $partido_actual['id']=$partido->postulantes[0]['id'];
+                $partido_actual['tag']=1;
 
-            $creemos['presidente']=$request['pre_cre'];
-            $creemos['diputado']=$request['dip_cre'];
-            $creemos['id']=2;
+                $partido_actual1['presidente']=$request['pre_'.strtolower(substr($partido->nombre,0,3))];
+                $partido_actual1['diputado']=$request['dip_'.strtolower(substr($partido->nombre,0,3))];
+                $partido_actual1['id']=$partido->postulantes[1]['id'];
+                $partido_actual1['tag']=2;
 
-            $comunidad_ciudadana['presidente']=$request['pre_com'];
-            $comunidad_ciudadana['diputado']=$request['dip_com'];
-            $comunidad_ciudadana['id']=3;
 
-            $votos[1]=$mas;
-            $votos[2]=$creemos;
-            $votos[3]=$comunidad_ciudadana;
+
+                array_push ( $votos,$partido_actual);
+                array_push ( $votos,$partido_actual1);
+            }
             $this->votoPostulanteRepository->store($request,$votos);
             $this->mesaRecintoRepository->update($request);
 
@@ -82,13 +87,7 @@ VotoPostulanteRepository $votoPostulanteRepository)
         }
     }
 
-    public function show($id)
-    {
-    }
 
-    public function edit($id)
-    {
-    }
 
     public function update(Request $request, $id)
     {

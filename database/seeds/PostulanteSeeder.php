@@ -13,19 +13,90 @@ class PostulanteSeeder extends Seeder
     public function run()
     {
         Postulante::create([
-            'nombre' => 'Luis Arce',
+            'nombre' => 'Camacho',
             'cargo' => 'presidente',
             'partido_id' => '1'
         ]);
         Postulante::create([
-            'nombre' => 'Camacho',
+            'nombre' => 'Postulante ADN',
             'cargo' => 'presidente',
             'partido_id' => '2'
         ]);
         Postulante::create([
-            'nombre' => 'Mesa',
+            'nombre' => 'Luis Arce',
             'cargo' => 'presidente',
             'partido_id' => '3'
+        ]);
+        Postulante::create([
+            'nombre' => 'Postulante FPV',
+            'cargo' => 'presidente',
+            'partido_id' => '4'
+        ]);
+        Postulante::create([
+            'nombre' => 'Postulante Pan-bol',
+            'cargo' => 'presidente',
+            'partido_id' => '5'
+        ]);
+
+        Postulante::create([
+            'nombre' => 'Mesa',
+            'cargo' => 'presidente',
+            'partido_id' => '6'
+        ]);
+        Postulante::create([
+            'nombre' => 'Tuto',
+            'cargo' => 'presidente',
+            'partido_id' => '7'
+        ]);
+        Postulante::create([
+            'nombre' => 'Añez',
+            'cargo' => 'presidente',
+            'partido_id' => '8'
+        ]);
+
+
+//DIPUTADOS
+
+        Postulante::create([
+            'nombre' => 'diputado',
+            'cargo' => 'diputado',
+            'partido_id' => '1'
+        ]);
+        Postulante::create([
+            'nombre' => 'diputado',
+            'cargo' => 'diputado',
+            'partido_id' => '2'
+        ]);
+        Postulante::create([
+            'nombre' => 'diputado',
+            'cargo' => 'diputado',
+            'partido_id' => '3'
+        ]);
+        Postulante::create([
+            'nombre' => 'diputado',
+            'cargo' => 'diputado',
+            'partido_id' => '4'
+        ]);
+        Postulante::create([
+            'nombre' => 'diputado',
+            'cargo' => 'diputado',
+            'partido_id' => '5'
+        ]);
+
+        Postulante::create([
+            'nombre' => 'diputado',
+            'cargo' => 'diputado',
+            'partido_id' => '6'
+        ]);
+        Postulante::create([
+            'nombre' => 'diputado',
+            'cargo' => 'diputado',
+            'partido_id' => '7'
+        ]);
+        Postulante::create([
+            'nombre' => 'diputado',
+            'cargo' => 'diputado',
+            'partido_id' => '8'
         ]);
     }
 }

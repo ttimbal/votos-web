@@ -1,12 +1,9 @@
 <ul id="sidenav-left" class="sidenav">
     <li>
         <div class="user-view">
-            <div class="background">
-                <img src="{{ asset('photos/fondo.jpg') }}">
+            <div class="center blue">
             </div>
             <a href="#user"><img class="circle" src="{{ asset('photos/profile.png') }}"></a>
-            <a href="#name"><span class="white-text name">{{ Auth::user()->name }}</span></a>
-            <a href="#email"><span class="white-text email">{{ Auth::user()->email }}</span></a>
         </div>
     </li>
     <li class="no-padding">
@@ -14,21 +11,23 @@
 
 
             <li>
-                <a class="collapsible-header waves-effect">Municipios<i class="material-icons">accessibility</i></a>
+                <a class="collapsible-header waves-effect">Municipios</a>
                 <div class="collapsible-body">
                     <ul>
 
 
                         <li><a href="{{ route('asientos',1) }}">La Guardia</a></li>
-
-                        <li><a href="{{ '' }}">Porongo</a></li>
-
-                        <li><a href="{{ '' }}">Cabezas</a></li>
+                        <li><a href="{{ route('asientos',2) }}">Camiri</a></li>
+                        <li><a href="{{ route('asientos',3) }}">Cabezas</a></li>
+                        <li><a href="{{ route('asientos',4) }}">Charagua</a></li>
+                        <li><a href="{{ route('asientos',5) }}">Boyuibe</a></li>
+                        <li><a href="{{ route('asientos',6) }}">Lagunillas</a></li>
+                        <li><a href="{{ route('asientos',7) }}">Cuevo</a></li>
 
                     </ul>
                 </div>
             </li>
-
+            <li><a class="collapsible-header waves-effect" href="{{ route('graficos') }}">graficos</a></li>
 
         </ul>
     </li>

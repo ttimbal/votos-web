@@ -11,7 +11,7 @@
                 </div>
             </div>
 
-            <div class="spinner-layer spinner-red">
+            <div class="spinner-layer spinner-blue">
                 <div class="circle-clipper left">
                     <div class="circle"></div>
                 </div><div class="gap-patch">
@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="spinner-layer spinner-red">
+            <div class="spinner-layer spinner-blue">
                 <div class="circle-clipper left">
                     <div class="circle"></div>
                 </div><div class="gap-patch">
@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <div class="spinner-layer spinner-red">
+            <div class="spinner-layer spinner-blue">
                 <div class="circle-clipper left">
                     <div class="circle"></div>
                 </div><div class="gap-patch">
@@ -54,3 +54,4 @@
         </div>
     </div>
 </div>
+

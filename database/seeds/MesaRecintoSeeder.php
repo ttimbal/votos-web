@@ -20,7 +20,8 @@ class MesaRecintoSeeder extends Seeder
                 'nulos' => 0,
                 'blancos' => 0,
                 'recinto_id' => $recinto->id,
-                'mesa_nro' => $i
+                'mesa_nro' => $i,
+                'con_votos' => false
             ]);
         }
     }

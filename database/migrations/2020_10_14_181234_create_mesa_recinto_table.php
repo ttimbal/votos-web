@@ -19,6 +19,7 @@ class CreateMesaRecintoTable extends Migration
             $table->unsignedBigInteger('blancos');
             $table->unsignedBigInteger('recinto_id');
             $table->unsignedBigInteger('mesa_nro');
+            $table->boolean('con_votos');
             $table->timestamps();
             $table->foreign('recinto_id')->on('recinto')->references('id')->cascadeOnDelete();
             $table->foreign('mesa_nro')->on('mesa')->references('nro')->cascadeOnDelete();

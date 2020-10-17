@@ -2,10 +2,12 @@
 
 @section('content')
     <div class="row">
+        <br>
+        <br>
         <div class="col s4 offset-s4">
             <div class="card blue lighten-5">
-                <div class="card-content text-darken-1">
-                    <h3 class="center">Login</h3>
+                <div class="card-content text-darken-1 white">
+                    <h3 class="center">Iniciar sesión</h3>
 
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
@@ -34,8 +36,7 @@
                             </div>
                             <div class="row">
                                 <div class="col offset-s4">
-                                    <button class="btn-small waves-effect waves-light center" type="submit" name="action" onclick="showProgress()">Submit
-                                        <i class="material-icons right">send</i>
+                                    <button class="btn-small waves-effect waves-light center blue" type="submit" name="action" onclick="showProgress()">Acceder
                                     </button>
                                 </div>
                             </div>

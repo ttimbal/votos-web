@@ -10,7 +10,7 @@ class Partido extends Model
 
     public $timestamps = true;
 
-    protected $fillable = ['nombre'];
+    protected $fillable = ['nombre','cargo','partido_id'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -20,4 +20,8 @@ class Partido extends Model
     protected $hidden = [
         'created_at', 'updated_at',
     ];
+    public function postulantes()
+    {
+        return $this->hasMany('App\Core\Models\Postulante');
+    }
 }

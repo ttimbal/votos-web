@@ -24,6 +24,6 @@
 
 @extends('layouts.app')
 
-@section('page-title', 'Home')
+@section('page-title', 'Inicio')
 
-@section('navbar-logo', 'Havla - Dashboard')
+@section('navbar-logo', 'Inicio')

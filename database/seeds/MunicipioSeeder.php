@@ -16,5 +16,31 @@ class MunicipioSeeder extends Seeder
             'nombre' => 'La Guardia',
             'circunscripcion_nro' => 55
         ]);
+        Municipio::create([
+            'nombre' => 'Camiri',
+            'circunscripcion_nro' => 55
+        ]);
+        Municipio::create([
+            'nombre' => 'Cabezas',
+            'circunscripcion_nro' => 55
+        ]);
+
+        Municipio::create([
+            'nombre' => 'Charagua',
+            'circunscripcion_nro' => 55
+        ]);
+        Municipio::create([
+            'nombre' => 'Boyuibe',
+            'circunscripcion_nro' => 55
+        ]);
+        Municipio::create([
+            'nombre' => 'Lagunillas',
+            'circunscripcion_nro' => 55
+        ]);
+        Municipio::create([
+            'nombre' => 'Cuevo',
+            'circunscripcion_nro' => 55
+        ]);
+
     }
 }

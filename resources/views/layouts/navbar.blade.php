@@ -1,8 +1,8 @@
 <div class="navbar-fixed">
-    <nav class="navbar nav-extended no-padding red darken-4">
+    <nav class="navbar nav-extended no-padding blue darken-4">
         <div class="nav-wrapper">
             <a href="#" class="brand-logo center hide-on-small-only">@yield('navbar-logo')</a>
-            <ul id="nav-mobile" class="right">
+            <ul id="nav-mobile" class="left">
 
                 @auth
                     <li>

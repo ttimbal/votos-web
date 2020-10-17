@@ -23,7 +23,7 @@
     @endauth
     @include('layouts.navbar')
 
-    <main class="primary-background">
+    <main class="primary-background ">
 
         @include('layouts.response')
         @auth

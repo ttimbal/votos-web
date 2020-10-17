@@ -38,14 +38,24 @@ class VotoPostulanteRepository
                 $voto_postulante = new VotoPostulante();
                 $voto_postulante->mesa_recinto_id = $data['mesa_recinto_id'];
                 $voto_postulante->postulante_id = $voto['id'];
-                $voto_postulante->votos = $voto['presidente'];
+                if($voto['tag']==1) {
+                    $voto_postulante->votos = $voto['presidente'];
+                }else{
+                    $voto_postulante->votos = $voto['diputado'];
+                }
                 $voto_postulante->save();
                // return $voto_postulante;
             } else {
+                $cant=0;
+                if($voto['tag']==1) {
+                    $cant = $voto['presidente'];
+                }else{
+                    $cant = $voto['diputado'];
+                }
                 $voto_postulante = VotoPostulante::select('*')
                     ->where('mesa_recinto_id', $data['mesa_recinto_id'])
                     ->where('postulante_id', $voto['id'])
-                    ->update(['votos' => $voto['presidente']]);;
+                    ->update(['votos' => $cant]);;
                // $voto_postulante->votos = $voto['presidente'];
                // $voto_postulante->save();
                // return $voto_postulante;

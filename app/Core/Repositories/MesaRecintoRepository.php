@@ -39,6 +39,7 @@ class MesaRecintoRepository
         $mesa_recinto = MesaRecinto::findOrFail($data['mesa_recinto_id']);
         $mesa_recinto->nulos = $data['nulo'];
         $mesa_recinto->blancos = $data['blanco'];
+        $mesa_recinto->con_votos = true;
         $mesa_recinto->save();
     }
 

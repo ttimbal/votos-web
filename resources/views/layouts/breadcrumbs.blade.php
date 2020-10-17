@@ -1,6 +1,6 @@
-<nav>
-    <div class="nav-wrapper">
-        <div class="col s12">
+<nav hidden>
+    <div class="nav-wrapper" >
+        <div class="col s12" >
             @if(Request::path() != 'home')
                 <a href="{{ route('home') }}" class="breadcrumb">Dashboard</a>
             @else

@@ -13,13 +13,28 @@ class PartidoSeeder extends Seeder
     public function run()
     {
         Partido::create([
-            'nombre' => 'MAS'
-        ]);
-        Partido::create([
             'nombre' => 'Creemos'
         ]);
         Partido::create([
+            'nombre' => 'ADN'
+        ]);
+        Partido::create([
+            'nombre' => 'MAS-IPSP'
+        ]);
+        Partido::create([
+            'nombre' => 'FPV'
+        ]);
+        Partido::create([
+            'nombre' => 'PAN-BOL'
+        ]);
+        Partido::create([
             'nombre' => 'Comunidad Ciudadana'
+        ]);
+        Partido::create([
+            'nombre' => 'Libre 21'
+        ]);
+        Partido::create([
+            'nombre' => 'Juntos'
         ]);
     }
 }

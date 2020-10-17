@@ -23,8 +23,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/municipio/{id}', 'AsientoController@index')->name('asientos');
+Route::get('/graficos', 'GraficoController@index')->name('graficos');
 Route::get('/municipio/{id}/mesas', 'MesaRecintoController@index')->name('mesas');
-Route::post('/municipio/a', 'MesaRecintoController@store')->name('guardar');
+Route::post('/save/{id}', 'MesaRecintoController@store')->name('guardar');
 
 Route::group(['middleware' => 'auth'], function () {
 /*

@@ -10,7 +10,7 @@ class MesaRecinto extends Model
 
     public $timestamps = true;
 
-    protected $fillable = ['nulos', 'blancos','recinto_id','mesa_nro'];
+    protected $fillable = ['nulos', 'blancos','recinto_id','mesa_nro','con_votos'];
 
     /**
      * The attributes that should be hidden for arrays.
